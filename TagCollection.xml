@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<Building BuildingId="1" BuildingName="BUILDING1" Description="">
+		<Floor FloorId="1" FloorName="FLOOR1" Description="">
+			<Room RoomId="1" RoomName="ROOM1" Description="">
+				<Device DeviceId="1" DeviceName="DEVICES" Description="">
+					<Tag TagId="1" TagName="LIGHT1" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT1" QoS="0" Retain="True" Description="" />
+					<Tag TagId="2" TagName="LIGHT2" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT2" QoS="0" Retain="True" Description="" />
+					<Tag TagId="3" TagName="LIGHT3" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT3" QoS="0" Retain="True" Description="" />
+					<Tag TagId="4" TagName="LIGHT4" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT4" QoS="0" Retain="True" Description="" />
+					<Tag TagId="5" TagName="FAN1" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN1" QoS="0" Retain="True" Description="" />
+					<Tag TagId="6" TagName="FAN2" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN2" QoS="0" Retain="True" Description="" />
+					<Tag TagId="7" TagName="FAN1_POWER" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN1_POWER" QoS="0" Retain="True" Description="" />
+					<Tag TagId="8" TagName="FAN2_POWER" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN2_POWER" QoS="0" Retain="True" Description="" />
+					<Tag TagId="9" TagName="FAN1_SPEED" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN1_SPEED" QoS="0" Retain="True" Description="" />
+					<Tag TagId="10" TagName="FAN2_SPEED" Topic="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN2_SPEED" QoS="0" Retain="True" Description="" />
+				</Device>
+			</Room>
+		</Floor>
+	</Building>
+</Root>

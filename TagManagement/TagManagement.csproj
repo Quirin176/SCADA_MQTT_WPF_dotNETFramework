@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34C7C5FE-C6EF-4F08-A4A3-84CF8E452F42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TagManagement</RootNamespace>
+    <AssemblyName>TagManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.DesignTools.Extensibility, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.DesignTools.Extensibility.17.10.34916.79\lib\net45\Microsoft.VisualStudio.DesignTools.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.DesignTools.Interaction, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.DesignTools.Extensibility.17.10.34916.79\lib\net45\Microsoft.VisualStudio.DesignTools.Interaction.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DesignTimeHelper.cs" />
+    <Compile Include="Dialog\Window_Building.xaml.cs">
+      <DependentUpon>Window_Building.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Window_Device.xaml.cs">
+      <DependentUpon>Window_Device.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Window_Floor.xaml.cs">
+      <DependentUpon>Window_Floor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Window_Room.xaml.cs">
+      <DependentUpon>Window_Room.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Window_Tag.xaml.cs">
+      <DependentUpon>Window_Tag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Building_Manager.cs" />
+    <Compile Include="Manager\Device_Manager.cs" />
+    <Compile Include="Manager\Floor_Manager.cs" />
+    <Compile Include="Manager\Room_Manager.cs" />
+    <Compile Include="Manager\Tag_Manager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TagManagerControl.cs" />
+    <Compile Include="Window_TagManagement.xaml.cs">
+      <DependentUpon>Window_TagManagement.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Dialog\Window_Building.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\Window_Device.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\Window_Floor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\Window_Room.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\Window_Tag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window_TagManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Resource Include="Resources\Tag_Building\Add_Building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Building\Add_Device.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Building\Add_Floor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Building\Add_Room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Building\Add_Tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Building\Delete_Tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\AddChannel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\AddDataBlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\AddDevice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\AddGoup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\AddTag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Channel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Choose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Device.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Quit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\SaveAs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\Tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\TagMana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tag_Table\TagManager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MQTT_Protocol\MQTT_Protocol.csproj">
+      <Project>{94d94bca-9619-4af4-b1f9-ab62a9e31397}</Project>
+      <Name>MQTT_Protocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

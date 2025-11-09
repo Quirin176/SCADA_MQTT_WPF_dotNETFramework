@@ -1,0 +1,50 @@
+﻿# Visual Studio / .NET
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+publish/
+*.exe
+*.dll
+*.pdb
+
+# NuGet
+packages/
+*.nupkg
+
+# Rider / ReSharper
+.idea/
+_ReSharper.Caches/
+
+# Node / web deps (if present)
+node_modules/
+
+# Secrets / config
+appsettings.json
+appsettings.*.json
+secrets.json
+*.key
+*.pfx
+*.pem
+
+# Databases / logs / runtime data (do not commit live logs)
+*.mdf
+*.ldf
+*.sqlite
+*.db
+*.bak
+*.log
+Logs/
+RuntimeData/
+
+# Misc
+Thumbs.db
+.DS_Store

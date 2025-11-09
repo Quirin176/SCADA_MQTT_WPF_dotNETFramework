@@ -1,0 +1,118 @@
+﻿<Window x:Class="MyWPFApp.Window_Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyWPFApp"
+        xmlns:lights="clr-namespace:HMI_Tool.Light;assembly=HMI_Tool"
+        xmlns:fans="clr-namespace:HMI_Tool.Fan;assembly=HMI_Tool"
+        xmlns:switches="clr-namespace:HMI_Tool.Switch;assembly=HMI_Tool"
+        xmlns:textdisplays="clr-namespace:HMI_Tool.TextDisplay;assembly=HMI_Tool"
+        xmlns:texteditors="clr-namespace:HMI_Tool.TextEditor;assembly=HMI_Tool"
+        xmlns:alarmview="clr-namespace:HMI_Alarm;assembly=HMI_Alarm"
+        xmlns:reportview="clr-namespace:HMI_Report;assembly=HMI_Report"
+        mc:Ignorable="d"
+        Title="Building Management System" Icon="/Resources/Friendship_Tower_Building.jpg" Height="1000" Width="1600"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Main_Loaded">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <!--User Info Section (Top-Right Corner)-->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Orientation="Vertical">
+            <TextBlock Text="Welcome," FontSize="28" FontWeight="Bold"/>
+            <TextBlock Name="txt_UserInfo" FontSize="28" FontWeight="Bold" Foreground="Blue" TextAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Background="Green" HorizontalAlignment="Stretch" VerticalAlignment="Top" Orientation="Vertical">
+            <TextBlock Text="{Binding CurrentDateTime, RelativeSource={RelativeSource AncestorType=Window}, StringFormat='{}{0:HH:mm:ss dd/MM/yyyy}'}"
+                       FontSize="18" FontWeight="Bold" Foreground="White"
+                       Height="40" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,10,0"/>
+        </StackPanel>
+
+        <TabControl x:Name="MainTabControl" Grid.Row="2" Width="1560" Height="850" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Tab/HOME.png" Width="16" Height="16" Margin="5,0,5,0"/>
+                        <TextBlock Text="HOME" FontSize="18"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Tab/LIGHTING.png" Width="16" Height="16" Margin="5,0,5,0"/>
+                        <TextBlock Text="LIGHTING" FontSize="18"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Border>
+                    <Border.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/Floor.png" Stretch="Fill"/>
+                    </Border.Background>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Title -->
+                        <TextBlock Text="CONTROL PANEL" FontSize="24" FontWeight="Bold" Foreground="ForestGreen"
+                                   HorizontalAlignment="Center" Margin="0,10,0,10"/>
+                        <Canvas>
+                            <!-- Devices -->
+                            <lights:Light Name="Light1" TagName="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT1" SwitchTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT1"
+                                      OnColor="Orange" OffColor="Blue" Width="30" Height="30" Canvas.Left="642" Canvas.Top="394" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <lights:Light Name="Light2" TagName="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT2" SwitchTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT2"
+                                      OnColor="Orange" OffColor="Blue" Width="30" Height="30" Canvas.Left="920" Canvas.Top="391" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            <lights:Light Name="Light3" TagName="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT3" SwitchTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT3"
+                                      OnColor="Orange" OffColor="Blue" Width="30" Height="30" Canvas.Left="928" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <lights:Light Name="Light4" TagName="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT4" SwitchTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT4"
+                                      OnColor="Orange" OffColor="Blue" Width="30" Height="30" Canvas.Left="638" Canvas.Top="545" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <fans:Fan Name="Fan1" TagName="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN1" SwitchTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN1"
+                                  PowerTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN1_POWER" SpeedTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN1_SPEED"
+                                  Width="50" Height="50" Canvas.Left="406" Canvas.Top="431" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <fans:Fan Name="Fan2" TagName="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN2" SwitchTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN2"
+                                  PowerTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN2_POWER" SpeedTagName="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN2_SPEED"
+                                  Width="50" Height="50" Canvas.Left="1026" Canvas.Top="442" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Canvas>
+                    </Grid>
+                </Border>
+            </TabItem>
+
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Tab/ALARM.png" Width="16" Height="16" Margin="5,0,5,0"/>
+                        <TextBlock Text="ALARM" FontSize="18"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid HorizontalAlignment="Center" Margin="10">
+                    <alarmview:Alarm_View Privilege="6"
+                                          DeviceName="FLOOR1"
+                                          AnalogXmlPath="D:\Visual_Studio\Visual_Studio\Projects\DEMO\DotNETFramework\WPF\CS\MyWPFApp\AnalogAlarmCollection.xml"
+                                          DigitalXmlPath="D:\Visual_Studio\Visual_Studio\Projects\DEMO\DotNETFramework\WPF\CS\MyWPFApp\DigitalAlarmCollection.xml"
+                                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                          Width="1500" Height="800"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Tab/REPORT.png" Width="16" Height="16" Margin="5,0,5,0"/>
+                        <TextBlock Text="REPORT" FontSize="18"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid HorizontalAlignment="Center" Margin="10">
+                    <reportview:Report_View Privilege="6"
+                                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1500" Height="800"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

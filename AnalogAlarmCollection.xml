@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<Device DeviceId="1" DeviceName="FLOOR1">
+		<Alarm AlarmId="10" AlarmName="FAN1_SPEED" Source="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN1_SPEED" HighHigh="1200" High="1000" Low="600" LowLow="400" />
+		<Alarm AlarmId="20" AlarmName="FAN2_SPEED" Source="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN2_SPEED" HighHigh="1200" High="1000" Low="600" LowLow="400" />
+	</Device>
+</Root>

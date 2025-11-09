@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<Device DeviceId="1" DeviceName="FLOOR1">
+		<Alarm AlarmId="1" AlarmName="LIGHT1" Source="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT1" />
+		<Alarm AlarmId="2" AlarmName="LIGHT2" Source="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT2" />
+		<Alarm AlarmId="3" AlarmName="LIGHT3" Source="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT3" />
+		<Alarm AlarmId="4" AlarmName="LIGHT4" Source="BUILDING1/FLOOR1/ROOM1/DEVICES/LIGHT4" />
+		<Alarm AlarmId="5" AlarmName="FAN1" Source="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN1" />
+		<Alarm AlarmId="6" AlarmName="FAN2" Source="BUILDING1/FLOOR1/ROOM1/DEVICES/FAN2" />
+	</Device>
+</Root>

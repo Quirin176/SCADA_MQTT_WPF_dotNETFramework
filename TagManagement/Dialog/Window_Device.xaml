@@ -1,0 +1,111 @@
+﻿<Window x:Class="TagManagement.Dialog.Window_Device"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TagManagement.Dialog"
+             mc:Ignorable="d" 
+        Title="Add Device" Height="520" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Icon="/TagManagement;component/Resources/Tag_Table/TagManager.png" Loaded="Window_Loaded">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                   Text="DEVICE SETTING" FontSize="16" FontWeight="Bold" Foreground="Blue"
+                   HorizontalAlignment="Center" Margin="0,5,0,10"/>
+
+        <!-- Floor Name -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Floor Name:" VerticalAlignment="Center"/>
+        <Border Grid.Row="1" Grid.Column="1"  Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1">
+            <TextBlock Name="txt_FloorName" FontWeight="Bold"/>
+        </Border>
+
+        <!-- Room Name -->
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Room Name:" VerticalAlignment="Center"/>
+        <Border Grid.Row="3" Grid.Column="1"  Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1">
+            <TextBlock Name="txt_RoomName" FontWeight="Bold"/>
+        </Border>
+
+        <!-- Device Name -->
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Device Name:" VerticalAlignment="Center"/>
+        <TextBox Name="txt_DeviceName" Grid.Row="5" Grid.Column="1"  Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Black"/>
+
+        <!-- Create Multiple Tags -->
+        <CheckBox Name="check_MultipleTags" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="Create Multiple Tags"
+                  Checked="check_MultipleTags_CheckedChanged"/>
+
+        <!-- Number of Tags -->
+        <TextBlock Grid.Row="9" Grid.Column="0" Text="Number of Tags:" VerticalAlignment="Center"/>
+        <TextBox Name="txt_NumberofTags" Grid.Row="9" Grid.Column="1" Width="50" IsEnabled="False"
+                 HorizontalAlignment="Left" VerticalAlignment="Center"
+                 BorderThickness="1" BorderBrush="Black"/>
+        
+        <!-- TagName Prefix -->
+        <TextBlock Grid.Row="11" Grid.Column="0" Text="TagName Prefix:" VerticalAlignment="Center"/>
+        <TextBox Name="txt_TagPrefix" Grid.Row="11" Grid.Column="1" BorderThickness="1" BorderBrush="Black" IsEnabled="False"/>
+
+        <!-- Topic Prefix -->
+        <TextBlock Grid.Row="13" Grid.Column="0" Text="Topic Prefix:" VerticalAlignment="Center"/>
+        <TextBox Name="txt_TopicPrefix" Grid.Row="13" Grid.Column="1"  Grid.ColumnSpan="3" IsEnabled="False"
+                 BorderThickness="1" BorderBrush="Black"/>
+
+        <!-- QoS & Retain -->
+        <TextBlock Grid.Row="15" Grid.Column="0" Text="QoS:" VerticalAlignment="Center"/>
+        <ComboBox Name="cbox_QoS" Grid.Row="15" Grid.Column="1" Width="50" HorizontalAlignment="Left" IsEnabled="False">
+            <ComboBoxItem Content="0"/>
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+        </ComboBox>
+        
+        <TextBlock Grid.Row="15" Grid.Column="2" Text=" Retain: " VerticalAlignment="Center"/>
+        <CheckBox Name="check_Retain"  Grid.Row="15" Grid.Column="3" Content="Retain" VerticalAlignment="Center" IsEnabled="False"/>
+
+        <!-- Description -->
+        <TextBlock Grid.Row="17" Grid.Column="0" Text="Description:" VerticalAlignment="Top"/>
+        <TextBox Name="txt_Description" Grid.Row="17" Grid.Column="1"  Grid.ColumnSpan="3" Height="60" IsEnabled="False"
+                     BorderThickness="1" BorderBrush="Black"/>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="19" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Name="btn_OK" Width="80" Height="30" Content="OK" Margin="5" Click="btn_OK_Click"/>
+            <Button Name="btn_Cancel" Width="80" Height="30" Content="Cancel" Margin="5" Click="btn_Cancel_Click"/>
+        </StackPanel>
+
+        <!-- Error Display -->
+        <TextBlock Name="txt_DeviceName_Error" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Foreground="Red" FontSize="12" />
+        <TextBlock Name="txt_NumberofTags_Error" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2" Foreground="Red" FontSize="12" />
+        <TextBlock Name="txt_TagPrefix_Error" Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="3" Foreground="Red" FontSize="12" />
+        <TextBlock Name="txt_TopicPrefix_Error" Grid.Row="14" Grid.Column="1" Grid.ColumnSpan="3" Foreground="Red" FontSize="12" />
+    </Grid>
+</Window>

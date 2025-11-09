@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWPFApp", "MyWPFApp\MyWPFApp.csproj", "{D3D6E18F-B5DB-4BB6-A335-AB0E146D90BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQTT_Protocol", "MQTT_Protocol\MQTT_Protocol.csproj", "{94D94BCA-9619-4AF4-B1F9-AB62A9E31397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMI_Tool", "HMI_Tool\HMI_Tool.csproj", "{6ED8229A-5ED2-46FB-8601-EDCF23464995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagManagement", "TagManagement\TagManagement.csproj", "{34C7C5FE-C6EF-4F08-A4A3-84CF8E452F42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		AnalogAlarmCollection.xml = AnalogAlarmCollection.xml
+		DigitalAlarmCollection.xml = DigitalAlarmCollection.xml
+		README.md = README.md
+		TagCollection.xml = TagCollection.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMI_Alarm", "HMI_Alarm\HMI_Alarm.csproj", "{48066DDD-432E-492E-96A8-3C01BB65D0EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMI_Report", "HMI_Report\HMI_Report.csproj", "{FD1B9BF8-EE8C-4904-9871-BE82765DDDCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3D6E18F-B5DB-4BB6-A335-AB0E146D90BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D6E18F-B5DB-4BB6-A335-AB0E146D90BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D6E18F-B5DB-4BB6-A335-AB0E146D90BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D6E18F-B5DB-4BB6-A335-AB0E146D90BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94D94BCA-9619-4AF4-B1F9-AB62A9E31397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D94BCA-9619-4AF4-B1F9-AB62A9E31397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D94BCA-9619-4AF4-B1F9-AB62A9E31397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D94BCA-9619-4AF4-B1F9-AB62A9E31397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED8229A-5ED2-46FB-8601-EDCF23464995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED8229A-5ED2-46FB-8601-EDCF23464995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED8229A-5ED2-46FB-8601-EDCF23464995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED8229A-5ED2-46FB-8601-EDCF23464995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34C7C5FE-C6EF-4F08-A4A3-84CF8E452F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C7C5FE-C6EF-4F08-A4A3-84CF8E452F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C7C5FE-C6EF-4F08-A4A3-84CF8E452F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C7C5FE-C6EF-4F08-A4A3-84CF8E452F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48066DDD-432E-492E-96A8-3C01BB65D0EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48066DDD-432E-492E-96A8-3C01BB65D0EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48066DDD-432E-492E-96A8-3C01BB65D0EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48066DDD-432E-492E-96A8-3C01BB65D0EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD1B9BF8-EE8C-4904-9871-BE82765DDDCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD1B9BF8-EE8C-4904-9871-BE82765DDDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD1B9BF8-EE8C-4904-9871-BE82765DDDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD1B9BF8-EE8C-4904-9871-BE82765DDDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05A9EA48-5C6A-43BE-9EC3-BDDD72D29981}
+	EndGlobalSection
+EndGlobal

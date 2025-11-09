@@ -1,0 +1,47 @@
+﻿<Window x:Class="TagManagement.Dialog.Window_Floor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TagManagement.Dialog"
+             mc:Ignorable="d" 
+        Title="Add Floor" Height="250" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Icon="/TagManagement;component/Resources/Tag_Table/TagManager.png" Loaded="Window_Loaded">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                   Text="FLOOR SETTING" FontSize="16" FontWeight="Bold" Foreground="Blue"
+                   HorizontalAlignment="Center" Margin="0,5,0,10"/>
+
+        <!-- Floor Name -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Floor Name:" VerticalAlignment="Center"/>
+        <TextBox Name="txt_FloorName" Grid.Row="1" Grid.Column="1" BorderThickness="1" BorderBrush="Black"/>
+
+        <!-- Error Display -->
+        <TextBlock Name="txt_ErrorMessage" Grid.Row="2" Grid.Column="1" Foreground="Red" FontSize="12" />
+
+        <!-- Description -->
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Description:" VerticalAlignment="Top" Margin="0,5,0,0"/>
+        <TextBox Name="txt_Description" Grid.Row="3" Grid.Column="1" Height="60" BorderThickness="1" BorderBrush="Black"/>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Name="btn_OK" Width="80" Height="30" Content="OK" Margin="5" Click="btn_OK_Click"/>
+            <Button Name="btn_Cancel" Width="80" Height="30" Content="Cancel" Margin="5" Click="btn_Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
