@@ -1,4 +1,4 @@
-# MyWPFApp — SCADA System (C# .NET Framework)
+# SCADA System (C# .NET Framework)
 
 This is a demo SCADA application built using C# WPF (.NET Framework), designed for real-time monitoring and control in industrial or IoT environments.
 
