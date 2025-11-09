@@ -2,6 +2,8 @@
 
 This is a demo SCADA application built using C# WPF (.NET Framework), designed for real-time monitoring and control in industrial or IoT environments.
 
+---
+
 ## Features
 - Real-time tag monitoring and control
 - Analog & Digital alarm handling and XML-based alarms configuration (`HMI_Alarm` project)
@@ -10,6 +12,8 @@ This is a demo SCADA application built using C# WPF (.NET Framework), designed f
 - Custom tool utilities (`HMI_Tool` project)
 - Central tag management and XML-based tags configuration (`TagManagement` project)
 - Data storage in Microsoft SQL Server
+
+---
 
 ## Solution Structure
 | Project | Description |
@@ -21,14 +25,19 @@ This is a demo SCADA application built using C# WPF (.NET Framework), designed f
 | **MQTT_Protocol** | Customized M2MQTT Library for SCADA-specific MQTT communication |
 | **TagManagement** | Central tag handling, configuration, and XML serialization |
 
+---
+
 ## Technology Stack
-- **C# .NET Framework**
-- **WPF** (Windows Presentation Foundation)
-- **LINQ** for database interaction
-- **MVVM pattern**
-- **Custom MQTT** (based on M2MQTT)
-- **XML Configuration Files** for alarms, tags, and system settings
-- **SQLite / File-based data logging**
+- **Language:** C# (.NET Framework)
+- **UI Framework:** WPF
+- **Design Pattern:** MVVM (adapted for WPF)
+- **Communication:** MQTT (customized M2MQTT)
+- **Database:** Microsoft SQL Server (optional file-based logging)
+- **Configuration Files:** XML (tags, alarms, users, system settings)
+- **Data Access:** LINQ
+- **Reporting:** Grid & chart-based reporting system
+
+---
 
 ## How to Run
 1. Clone the repository:
