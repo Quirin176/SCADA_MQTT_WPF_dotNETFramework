@@ -92,12 +92,12 @@
                     </StackPanel>
                 </TabItem.Header>
                 <Grid HorizontalAlignment="Center" Margin="10">
-                    <alarmview:Alarm_View Privilege="6"
+                    <!--<alarmview:Alarm_View Privilege="6"
                                           DeviceName="FLOOR1"
                                           AnalogXmlPath="D:\Visual_Studio\Visual_Studio\Projects\DEMO\DotNETFramework\WPF\CS\MyWPFApp\AnalogAlarmCollection.xml"
                                           DigitalXmlPath="D:\Visual_Studio\Visual_Studio\Projects\DEMO\DotNETFramework\WPF\CS\MyWPFApp\DigitalAlarmCollection.xml"
                                           HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                          Width="1500" Height="800"/>
+                                          Width="1500" Height="800"/>-->
                 </Grid>
             </TabItem>
 

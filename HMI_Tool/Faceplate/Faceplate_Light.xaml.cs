@@ -33,8 +33,13 @@ namespace HMI_Tool.Faceplate
 
         private void Faceplate_Loaded(object sender, RoutedEventArgs e)
         {
-            string currentValue = MQTT_TagCollection.Tags[LightTagName].Value.Trim().ToLower();
-            if (currentValue == null || currentValue == "" || currentValue == "0" || currentValue == "false")
+            string currentValue = MQTT_TagCollection.Tags[LightTagName].Value;
+            if (currentValue == null)
+            {
+                return;
+            }
+
+            if (currentValue.Trim().ToLower() == null || currentValue.Trim().ToLower() == "" || currentValue.Trim().ToLower() == "0" || currentValue.Trim().ToLower() == "false")
             {
                 Switch1.Value = false;
                 TextDisplay1.Foreground = Brushes.Red;
