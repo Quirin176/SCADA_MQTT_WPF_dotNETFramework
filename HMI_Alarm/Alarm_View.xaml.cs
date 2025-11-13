@@ -209,8 +209,7 @@ namespace HMI_Alarm
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("An error occurred while checking analog alarm: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                throw ex;
+                MessageBox.Show("An error occurred while checking analog alarm: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -238,10 +237,12 @@ namespace HMI_Alarm
                     {
                         //string alarmName = MQTT_TagCollection.Tags[tg.Source].TagName;
                         string currentValue = MQTT_TagCollection.Tags[tg.Source].Value;
-                        if (string.IsNullOrEmpty(currentValue.Trim()))
-                            continue;
+                        if (currentValue == null)
+                        {
+                            return;
+                        }
 
-                        if (currentValue == "1" || currentValue == "true" || currentValue == "TRUE" || currentValue == "True")
+                        if (currentValue.Trim().ToLower() == "1" || currentValue.Trim().ToLower() == "true")
                         {
                             LogAlarm(tg.AlarmId, tg.AlarmName, tg.Source, "ON");
                         }
